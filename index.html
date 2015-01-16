@@ -30,16 +30,17 @@ function go()
 
 
 <BODY onLoad="setTimeout('start()',speed);">
-<a href="javascript:go()"><img id = "welcomeTxt" src="icon1.gif" ></a>
+<div align="center"><a href="javascript:go()"><img id = "welcomeTxt" src="icon1.gif" ></a>
   
   <audio id="welcomeSound" preload="auto">
-  <source src="snoring.mp3""></source>
-  
- </audio>
- <audio id="shutdownSound"preload="auto">
-  <source src="0132.WAV"></source>
-  
-</audio>
+    <source src="snoring.mp3""></source>
+    
+  </audio>
+  <audio id="shutdownSound"preload="auto">
+    <source src="0132.WAV"></source>
+    
+  </audio>
+</div>
 
 <script type="text/javascript">
 window.onload=function(){
@@ -61,7 +62,6 @@ sdTxt.onmouseover=function(){
 };
 
 };
-</script>
-
+  </script>
 </BODY>
 </HTML>
