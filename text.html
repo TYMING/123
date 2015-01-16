@@ -1,0 +1,67 @@
+<SCRIPT Language="JavaScript">
+<!--
+// Valor工作室小誌 [valor Studio]
+var speed = 1000  //圖片切換時間
+var img= new Array()
+var url= new Array()
+var current = 0
+//一張圖片對應一個網址,可無限增加,編號由0開始
+img[0] = new Image(); img[0].src = "icon1.gif"; url[0] = "icon2.jpg" 
+//img[1] = new Image(); img[1].src = "icon2.gif";	url[1] = "http://gb.twbts.com"
+
+
+
+
+function start() 
+{
+current++
+if(current >=img.length) current = 0
+document.imgs.src = img[current].src
+setTimeout("start()",speed);
+}
+
+function go() 
+{window.location = url[current]}
+-->
+</SCRIPT>
+
+
+</HEAD>
+
+
+<BODY onLoad="setTimeout('start()',speed);">
+<a href="javascript:go()"><img id = "welcomeTxt" src="icon1.gif" ></a>
+  
+  <audio id="welcomeSound" preload="auto">
+  <source src="snoring.mp3""></source>
+  
+ </audio>
+ <audio id="shutdownSound"preload="auto">
+  <source src="0132.WAV"></source>
+  
+</audio>
+
+<script type="text/javascript">
+window.onload=function(){
+// collecting elements
+var welcomeSound = document.getElementById('welcomeSound');
+var welcomeTxt=document.getElementById('welcomeTxt');
+ 
+var sdSound=document.getElementById('shutdownSound');
+var sdTxt=document.getElementById('shutdownTxt');
+//playing welcome sound on mouse over
+welcomeTxt.onmouseover=function(){
+ welcomeSound.play();
+ return false;
+};
+ 
+sdTxt.onmouseover=function(){
+ sdSound.play();
+ return false;
+};
+
+};
+</script>
+
+</BODY>
+</HTML>
